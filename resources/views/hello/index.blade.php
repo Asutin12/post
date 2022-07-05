@@ -6,12 +6,13 @@
     tr th a:visited{color: white;}
     tr th a:hover{color: white;}
     tr th a:active{color: white;}
+    .slider{padding-top: 30px;}
 </style>
 @section('title','Index')
 
 @section('menubar')
     @parent
-    インデックスページ
+    ユーザーページ
 @endsection
 
 @section('content')
@@ -32,7 +33,7 @@
        </tr>
        @endforeach
     </table>
-      {{$items->appends(['sort'=>$sort])->links()}}
+      <div class="slider">{{$items->appends(['sort'=>$sort])->links()}}</div>
 @endsection
 
 @section('footer')
